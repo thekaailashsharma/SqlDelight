@@ -1,0 +1,23 @@
+CREATE TABLE Person (
+    id INTEGER NOT NULL PRIMARY KEY,
+    firstName TEXT NOT NULL,
+    lastName TEXT NOT NULL
+);
+
+getPersonById:
+SELECT *
+FROM Person
+WHERE id = ?;
+
+getAllPersons:
+SELECT *
+FROM Person;
+
+insertPerson:
+INSERT OR REPLACE
+INTO Person
+VALUES(?, ?, ?);
+
+deletePersonById:
+DELETE FROM Person
+WHERE id = ?;
