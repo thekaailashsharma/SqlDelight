@@ -99,8 +99,5 @@ sqldelight {
         packageName = "temp.learn.sqldelight"
         sourceFolders = listOf("sqldelight")
         schemaOutputDirectory = file("src/main/sqldelight/databases")
-        migrationOutputDirectory = file("src/main/sqldelight/cache")
-        verifyMigrations = true
-        deriveSchemaFromMigrations = true
     }
 }

@@ -32,7 +32,7 @@ class PersonDataSourceImpl(
 
     override suspend fun insertPerson(firstName: String, lastName: String, id: Long?, age: Long?) {
         withContext(Dispatchers.IO) {
-            queries.insertPerson(id, firstName, lastName, age)
+            queries.insertPerson(id, firstName, lastName, age, "")
         }
     }
 }

@@ -2,7 +2,8 @@ CREATE TABLE Person (
     id INTEGER NOT NULL PRIMARY KEY,
     firstName TEXT NOT NULL,
     lastName TEXT NOT NULL,
-    age INTEGER DEFAULT 18
+    age INTEGER DEFAULT 18,
+    userName TEXT NOT NULL DEFAULT NULL
 );
 
 getPersonById:
@@ -17,7 +18,7 @@ FROM Person;
 insertPerson:
 INSERT OR REPLACE
 INTO Person
-VALUES(?, ?, ?, ?);
+VALUES(?, ?, ?, ?, ?);
 
 deletePersonById:
 DELETE FROM Person
